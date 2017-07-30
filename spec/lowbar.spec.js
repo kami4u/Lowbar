@@ -14,9 +14,9 @@ describe('_', function () {
         return num % 2 === 0;
     }
 
-    // function isGreater4(num) {
-    //     return num > 4;
-    // }
+    function isGreater4(num) {
+        return num > 4;
+    }
     // Identity
     describe('#identity', function () {
         it('is a function', function () {
@@ -158,9 +158,27 @@ describe('_', function () {
             var result = _.filter([1, 2, 3, 4, 5], isEven);
             expect(result).to.be.an('array');
         });
-         it('should return an array of even numbers', function () {
+        it('should return an array of even numbers', function () {
             var result = _.filter([1, 2, 3, 4, 5], isEven);
             expect(result).to.eql([2, 4]);
+        });
+    });
+    // reject method
+    describe('#reject', function () {
+        it('is a function', function () {
+            expect(_.reject).to.be.a('function');
+        });
+        it('should return an array', function () {
+            var result = _.reject([1, 2, 3, 4, 5], isEven);
+            expect(result).to.be.an('array');
+        });
+        it('rejects out of the array the elements that don\'t pass the condition of the function', function () {
+            var result = _.reject([1, 2, 3, 4, 5], isEven);
+            expect(result).to.eql([1, 3, 5]);
+        });
+        it('rejects out of the array the elements that greater than 4', function () {
+            var result = _.reject([1, 2, 3, 4, 5], isGreater4);
+            expect(result).to.eql([1, 2, 3, 4]);
         });
     });
 });
