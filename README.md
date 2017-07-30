@@ -35,6 +35,7 @@ These are the core functions to be implemented,
 11. once
 12. memoize
 13. shuffle
+14. invoke
 
 Referencing the APIs of the following;
 
