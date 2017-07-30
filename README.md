@@ -33,6 +33,8 @@ These are the core functions to be implemented,
 9. map
 10. contains
 11. once
+12. memoize
+13. shuffle
 
 Referencing the APIs of the following;
 
