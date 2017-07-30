@@ -1,12 +1,22 @@
 var path = require('path');
-var { expect } = require('chai');
+var {
+    expect
+} = require('chai');
 
 var _ = require(path.join(__dirname, '..', './lowbar.js'));
 
-describe('_', function() {
-    it('is an object', function() {
+describe('_', function () {
+    it('is an object', function () {
         expect(_).to.be.an('object');
     });
+
+    function isEven(num) {
+        return num % 2 === 0;
+    }
+
+    // function isGreater4(num) {
+    //     return num > 4;
+    // }
     // Identity
     describe('#identity', function () {
         it('is a function', function () {
@@ -31,8 +41,18 @@ describe('_', function() {
             expect(result).to.eql([1, 2]);
         });
         it('it should return nth elements of array', function () {
-            var result = _.first([{ name: 'kami' }, { name: 'wassan' }, { name: 'men' }], 2);
-            expect(result).to.eql([{ name: 'kami' }, { name: 'wassan' }]);
+            var result = _.first([{
+                name: 'kami'
+            }, {
+                name: 'wassan'
+            }, {
+                name: 'men'
+            }], 2);
+            expect(result).to.eql([{
+                name: 'kami'
+            }, {
+                name: 'wassan'
+            }]);
         });
     });
     // last method
@@ -49,8 +69,18 @@ describe('_', function() {
             expect(result).to.eql([4, 5]);
         });
         it('it should return last nth elements of array', function () {
-            var result = _.last([{ name: 'kami' }, { name: 'wassan' }, { name: 'men' }], 2);
-            expect(result).to.eql([{ name: 'wassan' }, { name: 'men' }]);
+            var result = _.last([{
+                name: 'kami'
+            }, {
+                name: 'wassan'
+            }, {
+                name: 'men'
+            }], 2);
+            expect(result).to.eql([{
+                name: 'wassan'
+            }, {
+                name: 'men'
+            }]);
         });
     });
     // each method
@@ -61,14 +91,18 @@ describe('_', function() {
         it('calls the function as many times as items in the array', function () {
             var count = 0;
 
-            function incrementCount() { count++; }
+            function incrementCount() {
+                count++;
+            }
             _.each([1, 2, 3], incrementCount);
             expect(count).to.equal(3);
         });
         it('calls the function with each item of the array as the first argumet', function () {
             var count = 0;
-           
-            function incrementCount() { count++; }
+
+            function incrementCount() {
+                count++;
+            }
             _.each([1, 2, 3], incrementCount);
             expect(count).to.equal(3);
         });
@@ -84,6 +118,7 @@ describe('_', function() {
 
         it('calls the function with the index of each item as the second argumet', function () {
             var basket = [];
+
             function putIndexInBasket(item, index) {
                 basket.push(index);
             }
@@ -112,6 +147,20 @@ describe('_', function() {
         it('it should return index if found and start from given index if third argument is passed', function () {
             var result = _.indexOf([1, 2, 3, 4, 5, 1], 1, 2);
             expect(result).to.eql(5);
+        });
+    });
+    // Filter method
+    describe('#filter', function () {
+        it('is a function', function () {
+            expect(_.filter).to.be.a('function');
+        });
+        it('should return an array', function () {
+            var result = _.filter([1, 2, 3, 4, 5], isEven);
+            expect(result).to.be.an('array');
+        });
+         it('should return an array of even numbers', function () {
+            var result = _.filter([1, 2, 3, 4, 5], isEven);
+            expect(result).to.eql([2, 4]);
         });
     });
 });
