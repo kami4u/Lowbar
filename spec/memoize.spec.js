@@ -19,5 +19,7 @@ describe('memoize()', function () {
         expect(spy.callCount).to.equal(1);
         memoizeSpy(2);
         expect(spy.callCount).to.equal(2);
+        memoizeSpy(2);
+        expect(spy.callCount).to.equal(2);
     });
 });
