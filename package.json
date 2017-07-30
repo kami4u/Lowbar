@@ -1,0 +1,25 @@
+{
+  "name": "lowbar",
+  "version": "1.0.0",
+  "description": "## Goals",
+  "main": "lowbar.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kami4u/Lowbar.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kami4u/Lowbar/issues"
+  },
+  "homepage": "https://github.com/kami4u/Lowbar#readme",
+  "devDependencies": {
+    "chai": "^4.1.0",
+    "eslint": "^4.3.0",
+    "husky": "^0.14.3",
+    "mocha": "^3.4.2"
+  }
+}
