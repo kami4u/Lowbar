@@ -36,6 +36,7 @@ These are the core functions to be implemented,
 12. memoize
 13. shuffle
 14. invoke
+15. sortBy
 
 Referencing the APIs of the following;
 
