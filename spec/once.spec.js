@@ -4,7 +4,7 @@ var sinon = require('sinon');
 var _ = require(path.join(__dirname, '..', 'src', './once'));
 
 
-describe('once()', function () {
+describe('#once', function () {
   it('exists', function () {
     expect(_.once).to.be.a('function');
   });

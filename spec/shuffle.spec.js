@@ -5,7 +5,7 @@ var {
 var _ = require(path.join(__dirname, '..', 'src', './shuffle'));
 
 
-describe('shuffle()', function () {
+describe('#shuffle', function () {
   it('exists', function () {
     expect(_.shuffle).to.be.a('function');
   });

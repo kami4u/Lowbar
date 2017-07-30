@@ -6,7 +6,7 @@ var sinon = require('sinon');
 var _ = require(path.join(__dirname, '..', 'src', './memoize'));
 
 
-describe('memoize()', function () {
+describe('#memoize', function () {
     it('exists', function () {
         expect(_.memoize).to.be.a('function');
     });
