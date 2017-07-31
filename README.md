@@ -38,6 +38,7 @@ These are the core functions to be implemented,
 14. invoke
 15. sortBy
 16. zip
+17. sortedIndex
 
 Referencing the APIs of the following;
 
