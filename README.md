@@ -37,6 +37,7 @@ These are the core functions to be implemented,
 13. shuffle
 14. invoke
 15. sortBy
+16. zip
 
 Referencing the APIs of the following;
 
