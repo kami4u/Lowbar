@@ -39,6 +39,7 @@ These are the core functions to be implemented,
 15. sortBy
 16. zip
 17. sortedIndex
+18. flatten
 
 Referencing the APIs of the following;
 
