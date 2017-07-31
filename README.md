@@ -41,6 +41,7 @@ These are the core functions to be implemented,
 17. sortedIndex
 18. flatten
 19. intersection
+20. difference
 
 Referencing the APIs of the following;
 
